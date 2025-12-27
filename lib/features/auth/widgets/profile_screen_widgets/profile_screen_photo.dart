@@ -1,4 +1,3 @@
-import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:yumzy/features/auth/data/auth_cubit/auth_cubit.dart';
@@ -19,13 +18,9 @@ class ProfileScreenPhoto extends StatelessWidget {
         Center(
           child: CircleAvatar(
             radius: 60,
-            backgroundImage:
-            //FileImage(File(authCubit.profileImage?? ''))
-            
-            NetworkImage(
-              authCubit.profile?.data?.image ??
-                  'https://icons.veryicon.com/png/o/miscellaneous/bitisland-world/person-18.png',
-            ),
+            backgroundImage:authCubit.pickedImage!=null ?
+            FileImage(authCubit.pickedImage!):
+            NetworkImage('https://icons.veryicon.com/png/o/miscellaneous/bitisland-world/person-18.png',),
           ),
         ),
         const  SizedBox(height: 20),
@@ -36,8 +31,7 @@ class ProfileScreenPhoto extends StatelessWidget {
             bottomColor: kPrimaryColor,
             width: 160,
             onTap: () {
-
-             // authCubit.pickedProfileImage();
+              authCubit.pickProfileImage();
             },
           ),
         ),

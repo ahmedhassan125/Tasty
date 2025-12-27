@@ -1,5 +1,8 @@
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:yumzy/core/network/api_service.dart';
 import 'package:yumzy/core/network/dio_helper.dart';
 import 'package:yumzy/core/network/secure_storege_helper.dart';
@@ -126,12 +129,12 @@ class AuthCubit extends Cubit<AuthState> {
     }
   }
   //******************************************* Update Profile //***************************************
-
+  File? pickedImage;
   Future<void> updateProfile({
     String? name,
     String? email,
     String? address,
-    String? image,
+    //String? image, انا خلاص مش هحتاجها هنا لاني ضفت الصوره من ال authrepo  وعملت كونيشن لو موجودهخ تتضاف اوتوماتيك
     String? visa,
   }) async {
     if (await _needLogin()) return;
@@ -141,11 +144,12 @@ class AuthCubit extends Cubit<AuthState> {
         name: name,
         email: email,
         address: address,
-        image: image,
+        imageFile: pickedImage,
         visa: visa,
       );
       profile = response;
       emit(UpdateProfileSuccessState(profile: response));
+      pickedImage = null;
       isSelected =false;
       await getProfileData();
     } catch (error,stackTrace) {
@@ -153,6 +157,36 @@ class AuthCubit extends Cubit<AuthState> {
       emit(UpdateProfileErrorState(error.toString()));
     }
   }
+  //******************************************* ImagePicker//***************************************
+
+  Future<void> pickProfileImage() async {
+    final ImagePicker picker = ImagePicker();
+    final XFile? image = await picker.pickImage(
+      source: ImageSource.gallery,
+      imageQuality: 50,
+    );
+
+    if (image != null) {
+      pickedImage = File(image.path);
+      emit(ImagePickedState());
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   TextEditingController? nameController;
   TextEditingController? emailController;

@@ -95,3 +95,4 @@ class WarningAuthtState extends AuthState {
 
 
 class ChangeLanguage extends AuthState {}
+class ImagePickedState extends AuthState {}

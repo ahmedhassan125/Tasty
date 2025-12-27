@@ -1,5 +1,4 @@
 import 'package:dio/dio.dart';
-import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:yumzy/core/network/dio_helper.dart';
 
 import 'api_exceptions.dart';
@@ -35,7 +34,7 @@ class ApiService {
   //****************************************** Post Date **********************************************
   Future<dynamic> postData({
     required String endPoint,
-    Map<String, dynamic>? data,
+    dynamic data,
    // String? token,
   }) async {
     try {

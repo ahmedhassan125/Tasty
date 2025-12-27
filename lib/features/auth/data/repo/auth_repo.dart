@@ -1,3 +1,7 @@
+import 'dart:io';
+
+import 'package:dio/dio.dart';
+
 import '../../../../core/network/api_service.dart';
 import '../models/auth_model.dart';
 import '../models/profile_model.dart';
@@ -61,23 +65,54 @@ class AuthRepo {
   }
   //******************************************* UpDate Profile   //***************************************
 
+  // Future<ProfileModel> upDateProfile({
+  //   String? name,
+  //   String? email,
+  //   String? address,
+  //   String? image,
+  //   String? visa,
+  // }) async {
+  //   final response = await apiService.postData(
+  //     endPoint: '/update-profile',
+  //     data: {
+  //       'name': name,
+  //       'email': email,
+  //       'address': address,
+  //       'image': image,
+  //       'Visa': visa,
+  //     },
+  //   );
+  //   return ProfileModel.fromJson(response);
+  // }
+
+
   Future<ProfileModel> upDateProfile({
     String? name,
     String? email,
     String? address,
-    String? image,
+    File? imageFile,
     String? visa,
   }) async {
+    Map<String, dynamic> fields = {
+      'name': name,
+      'email': email,
+      'address': address,
+      'Visa': visa,
+    };
+
+    FormData formData = FormData.fromMap(fields);
+    if (imageFile != null) {
+      formData.files.add(MapEntry(
+        'image', await MultipartFile.fromFile(imageFile.path,
+            filename: imageFile.path.split('/').last),
+      ));
+    }
     final response = await apiService.postData(
       endPoint: '/update-profile',
-      data: {
-        'name': name,
-        'email': email,
-        'address': address,
-        'image': image,
-        'Visa': visa,
-      },
+      data: formData,
     );
     return ProfileModel.fromJson(response);
   }
+
+
 }
