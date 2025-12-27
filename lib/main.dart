@@ -39,8 +39,8 @@ class MyApp extends StatelessWidget {
   final DioHelper dioHelper;
   final String? initialToken;
 
-
-   MyApp({super.key, required this.dioHelper,this.initialToken});
+// initialToken
+  const MyApp({super.key, required this.dioHelper,this.initialToken});
 
   @override
   Widget build(BuildContext context) {
