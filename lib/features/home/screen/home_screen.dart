@@ -26,10 +26,12 @@ class HomeScreen extends StatelessWidget {
           current is GetProductsByCategorySuccessState ||
           current is GetProductsByCategoryLoadingState ||
           current is GetCategorySuccessState ||
+          current is ImagePickedState ||
           current is SearchProductsState,
       listenWhen: (previous, current) =>
           current is GetProductsErrorState ||
           current is GetProductsByCategoryErrorState ||
+          current is ImagePickedState ||
           current is GetCategorySuccessState,
       builder: (context, state) {
         final homeCubit = HomeCubit.get(context);
