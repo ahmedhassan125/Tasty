@@ -1,0 +1,81 @@
+{
+  "login": "تسجيل الدخول",
+  "email": "البريد الإلكتروني",
+  "password": "كلمة المرور",
+  "signUp": "اشترك معنا ",
+  "welcome": "مرحبًا",
+  "mustLogIn": "عذراً، يجب عليك تسجيل الدخول لـ",
+  "cartGuest": "لمشاهده محتويات السلة.",
+  "OR": "أو",
+  "emailValidator": "يرجى إدخال بريد إلكتروني صحيح",
+  "passwordValidator": "يجب أن تتكون كلمة المرور من 8 أحرف على الأقل",
+  "emptyEmail": "الرجاء إدخال بريدك الإلكتروني",
+  "emptyPassword": "لا يمكن أن تكون كلمة المرور فارغة",
+  "wellComeText": "سجّل الدخول واكتشف النكهات المصممة خصيصاً لك.",
+  "singUpWellCome": "هل تشعر بالجوع؟ هيا بنا!",
+  "emptyName": "لا يمكن أن يكون اسمك فارغًا",
+  "name": "الاسم",
+  "phoneValidator": "يرجى تأكيد رقم هاتفك",
+  "phone": "رقم الهاتف",
+  "editeProfile": "لتعديل ملفك الشخصى",
+  "logOut": "تسجيل الخروج",
+  "uploadPhoto": "تحميل صورة",
+  "address": "العنوان ",
+  "updateProfile": "تحديث الملف الشخصي",
+  "updateSuccessfully": "تم تحديث ملفك الشخصي بنجاح",
+  "EGP": "جنيه",
+  "remove": "حذف",
+  "checkout": "الدفع",
+  "total": "الاجمالي",
+  "itemDeleted": "تم حذف العنصر بنجاح",
+  "emptyCart": "السله الخاصه بك فارغه !",
+  "startShopping": "ابدأ بالتسوق معنا ",
+  "goShopping": "اذهب للتسوق",
+  "orderSummary": "ملخص الطلب",
+  "taxes": "الضرائب",
+  "order": "الطلب",
+  "deliveryFees": "مصاريف التوصيل",
+  "totalFees": "اجمالي المبلغ",
+  "deliveryTime": "وقت التوصيل:",
+  "paymentMethods": "طريقه الدفع",
+  "cashOnDelivery": "الدفع عند الاستلام",
+  "payOnline": "الدفع اونلاين",
+  "payNaw": "ادفع الان",
+  "mins": "دقيقه",
+  "success": "تم بنجاح",
+  "paymentSuccess": "تم الدفع بنجاح نرغب في رؤيتك قريبا ",
+  "Search": "بحث",
+  "noOrder": "لا يوجد طلبات حتى الان",
+  "showOrderHistory": "لعرض سجل طلباتك. ",
+  "wellComeGuest": "سجل دخولك واكتشف النكهات المصنوعه خصيصا لك",
+  "orderDetails": "تفاصيل الطلب",
+  "price": "السعر",
+  "reOrder": "اعادة الطلب ",
+  "quantity": "الكمية",
+  "toppings": "الاضافات",
+  "sideOptions": "اضافات اخرى",
+  "addToCart": "اضافه الى السله ",
+  "spicySlider": "خصّص تجربتك معنا",
+  "spicy": "حار",
+  "home": "الرئيسية",
+  "cart": "السلة",
+  "history": "طلباتك",
+  "profile": "حسابك",
+  "goBack": "رجوع للخلف",
+  "mustLog": "لابد من تسجيل الدخول للاستمرار",
+  "usd": "دولار"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

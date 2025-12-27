@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "90283322946",
+    "project_id": "tasty-564f2",
+    "storage_bucket": "tasty-564f2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:90283322946:android:58a3452f125d07abc747db",
+        "android_client_info": {
+          "package_name": "com.yumzy.yumzy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD70CPROyFWhEtlfUtKM-udXKRgqd9xMIk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
